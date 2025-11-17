@@ -2,7 +2,7 @@
 
 .title {
   height: 310px;
-  background-image: url(../images/delivery/uber.JPG);
+  background-image: url(../images/delivery/uber.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -103,3 +103,4 @@
     row-gap: 40px;
   }
 }
+
