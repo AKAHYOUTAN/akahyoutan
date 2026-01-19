@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* =========================
+   ページタイトル
+========================= */
 .title {
   height: 310px;
   background-image: url(../images/menu/bg-main.jpg);
@@ -25,62 +28,98 @@
   margin-top: 15px;
 }
 
+/* =========================
+   メニュー一覧
+========================= */
 .item-list {
   width: 930px;
   max-width: 90%;
-  margin-top: 75px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 75px auto 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 240px);
-  column-gap: 95px;
-  row-gap: 70px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
   list-style: none;
+  padding: 0;
 }
 
+.item-list li {
+  background: #ffffff;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* 画像（使わない場合はHTML側で削除OK） */
+.item-list img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* テキスト */
 .item-list dl {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .item-list dt {
+  font-size: 16px;
   font-weight: bold;
 }
 
 .item-list dd {
-  font-size: 13px;
-  line-height: 20px;
-  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 8px;
 }
 
+/* 価格 */
 .item-list .price {
+  font-size: 15px;
   font-weight: bold;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
-.item-list li {
-  position: relative;
-}
-
+/* 英字ラベル（縦回転なし・安全仕様） */
 .item-list .item-label {
-  position: absolute;
-  top: 0;
-  left: calc(100% + 18px);
-  font-size: 10px;
-  white-space: nowrap;
-  transform-origin: top left;
-  transform: rotate(90deg);
+  font-size: 11px;
+  color: #777;
+  margin-top: 6px;
 }
 
-.footr {
+/* =========================
+   注意書き
+========================= */
+.menu-note {
+  font-size: 13px;
+  color: #555;
+  max-width: 800px;
+  margin: 40px auto 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =========================
+   フッター余白
+========================= */
+.footer {
   margin-top: 100px;
-}@media (max-width: 800px) {
+}
+
+/* =========================
+   スマホ対応
+========================= */
+@media (max-width: 800px) {
   .item-list {
     margin-top: 45px;
-    row-gap: 40px;
+    gap: 24px;
+  }
+
+  .item-list img {
+    height: 150px;
+  }
+
+  .menu-note {
+    margin-top: 24px;
+    padding: 0 12px;
   }
 }
-
-
-
-
